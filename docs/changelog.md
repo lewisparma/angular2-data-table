@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.11.2
+- Enhancement: Add ability to define css icon classes for pager / header
+- Chore: Uprade to Angular 2.1.1
+
+## 0.11.1
+- Chore: Polish on new build
+
+## 0.11.0
+- Chore: New build process
+- Bug: Fix detail row bug (#212)
+
+## 0.10.1
+- Bug: Fix `$$expanded` undefined with server paging (#210)
+
+## 0.10.0
+- Chore: Upgrade to Angular 2.1.0 (#202)
+- Chore: Removed engine restrictions (#195)
+- Bug: windows builds with node-sass (#207)
+- Bug: resizing not closing correctly (#196)
+- Bug: Fix height paging (#208)
+- Enhancement: Improve Active CSS (#204)
+- Enhancement: Add Empty Message (#194)
+- Enhancement: Add deep value getter to sortRows function (#181)
+- Enhancement: Sort Classes are applied to body cells (#166)
+- Enhancement: AoT Compatibility (#199)
+- Feature: Row Detail (#201)
+
 ## 0.9.3
 - Column resize sometimes gives weird behaviour on mouse resize/click (#155)
 - Fix order of setters in DataTable ngOnChanges (#179)

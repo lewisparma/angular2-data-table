@@ -11,12 +11,12 @@ var TableOptions = (function () {
         // The row height; which is necessary
         // to calculate the height for the lazy rendering.
         this.rowHeight = 30;
+        // The detail row height is required especially when virtual scroll is enabled.
+        this.detailRowHeight = 0;
         // flex
         // force
         // standard
         this.columnMode = types_1.ColumnMode.standard;
-        // Loading message presented when the array is undefined
-        this.loadingMessage = 'Loading...';
         // Message to show when array is presented
         // but contains no values
         this.emptyMessage = 'No data to display';
@@ -45,6 +45,15 @@ var TableOptions = (function () {
         this.sortType = types_1.SortType.single;
         // sorts
         this.sorts = [];
+        // css class overrides
+        this.cssClasses = {
+            sortAscending: 'icon-down',
+            sortDescending: 'icon-up',
+            pagerLeftArrow: 'icon-left',
+            pagerRightArrow: 'icon-right',
+            pagerPrevious: 'icon-prev',
+            pagerNext: 'icon-skip'
+        };
         Object.assign(this, props);
         this.validate();
     }

@@ -1,6 +1,7 @@
 import { TableColumn } from './table-column.model';
 import { Sort } from './sort.model';
 import { ColumnMode, SortType, SelectionType } from '../types';
+import { TemplateRef } from '@angular/core';
 
 export class TableOptions {
 
@@ -17,13 +18,13 @@ export class TableOptions {
   // to calculate the height for the lazy rendering.
   rowHeight: number = 30;
 
+  // The detail row height is required especially when virtual scroll is enabled.
+  detailRowHeight: number = 0;
+
   // flex
   // force
   // standard
   columnMode: ColumnMode = ColumnMode.standard;
-
-  // Loading message presented when the array is undefined
-  loadingMessage: string = 'Loading...';
 
   // Message to show when array is presented
   // but contains no values
@@ -67,6 +68,19 @@ export class TableOptions {
 
   // sorts
   sorts: Array<Sort> = [];
+
+  // row detail template
+  rowDetailTemplate: TemplateRef<any>;
+
+  // css class overrides
+  cssClasses: any = {
+    sortAscending: 'icon-down',
+    sortDescending: 'icon-up',
+    pagerLeftArrow: 'icon-left',
+    pagerRightArrow: 'icon-right',
+    pagerPrevious: 'icon-prev',
+    pagerNext: 'icon-skip'
+  };
 
   constructor(props: any) {
     Object.assign(this, props);
